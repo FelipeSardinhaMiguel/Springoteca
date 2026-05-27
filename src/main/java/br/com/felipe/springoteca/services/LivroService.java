@@ -1,11 +1,21 @@
 package br.com.felipe.springoteca.services;
 
+import br.com.felipe.springoteca.controllers.LivroController;
+import br.com.felipe.springoteca.models.LivroModel;
 import br.com.felipe.springoteca.repositorys.LivroRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LivroService {
-    private LivroRepository livroRepository;
+    public final LivroRepository livroRepository;
 
-    public
+    public LivroService(LivroRepository livroRepository) {
+        this.livroRepository = livroRepository;
+    }
+
+    public LivroModel getById(Long id)
+    {
+        return livroRepository.findById(id).orElse(null);
+    }
+
 }

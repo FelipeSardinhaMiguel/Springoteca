@@ -1,19 +1,23 @@
 package br.com.felipe.springoteca.controllers;
 
 import br.com.felipe.springoteca.models.LivroModel;
+import br.com.felipe.springoteca.services.LivroService;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/livros")
 public class LivroController {
 
-    @GetMapping
+    private final LivroService livroService;
+
+    public LivroController(LivroService livroService) {
+        this.livroService = livroService;
+    }
+
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public LivroModel getById("/{id}"){
-        return "livro tal";
+    public LivroModel getLivroById(@PathVariable Long id){
+        return livroService.getById(id);
     }
 }
