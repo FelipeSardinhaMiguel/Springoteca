@@ -1,6 +1,5 @@
 package br.com.felipe.springoteca.services;
 
-import br.com.felipe.springoteca.controllers.LivroController;
 import br.com.felipe.springoteca.models.LivroModel;
 import br.com.felipe.springoteca.repositorys.LivroRepository;
 import org.springframework.stereotype.Service;
