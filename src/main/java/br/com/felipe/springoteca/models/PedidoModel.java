@@ -1,24 +1,24 @@
 package br.com.felipe.springoteca.models;
 
+import br.com.felipe.springoteca.enuns.StatusCompra;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "pedido")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UsuarioModel {
+public class PedidoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String f_name;
-    private String s_name;
-    private String l_name;
-    private String email;
-    private Date dt_nascimento;
+    private Long id_user;
+    private Date dt_pedido;
+    private double valorTotal;
+    private StatusCompra status;
 }

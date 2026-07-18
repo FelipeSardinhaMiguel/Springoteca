@@ -3,22 +3,16 @@ package br.com.felipe.springoteca.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
-
 @Entity
-@Table(name = "usuario")
+@Table(name = "editora")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UsuarioModel {
+public class EditoraModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String f_name;
-    private String s_name;
-    private String l_name;
-    private String email;
-    private Date dt_nascimento;
+    private String name;
 }

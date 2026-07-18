@@ -6,19 +6,19 @@ import lombok.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "anuncioVenda")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UsuarioModel {
+public class AnuncioVendaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String f_name;
-    private String s_name;
-    private String l_name;
-    private String email;
-    private Date dt_nascimento;
+    private Long id_user; //id do user que está anunciando o livro
+    private Long id_livro;
+    private double preco;
+    private int qtd_disponivel;
+    private Date dt_anuncio;
 }
