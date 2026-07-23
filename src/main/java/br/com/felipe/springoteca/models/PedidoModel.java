@@ -4,6 +4,8 @@ import br.com.felipe.springoteca.enuns.StatusCompra;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -17,8 +19,8 @@ public class PedidoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long id_user;
-    private Date dt_pedido;
-    private double valorTotal;
+    private Long idUser;
+    private LocalDate dataPedido;
+    private BigDecimal valorTotal;
     private StatusCompra status;
 }

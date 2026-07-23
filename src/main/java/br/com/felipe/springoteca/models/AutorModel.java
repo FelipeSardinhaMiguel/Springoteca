@@ -14,6 +14,5 @@ public class AutorModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String f_name;
-    private String s_name;
+    private String fullName;
 }

@@ -3,6 +3,7 @@ package br.com.felipe.springoteca.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,9 +17,9 @@ public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String f_name;
-    private String s_name;
-    private String l_name;
+    private String firstName;
+    private String secondName;
+    private String lastName;
     private String email;
-    private Date dt_nascimento;
+    private LocalDate dataNascimento;
 }

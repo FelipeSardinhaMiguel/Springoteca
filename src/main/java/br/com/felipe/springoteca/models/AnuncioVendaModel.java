@@ -3,6 +3,8 @@ package br.com.felipe.springoteca.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,9 +18,9 @@ public class AnuncioVendaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long id_user; //id do user que está anunciando o livro
-    private Long id_livro;
-    private double preco;
-    private int qtd_disponivel;
-    private Date dt_anuncio;
+    private Long idUser; //id do user que está anunciando o livro
+    private Long idLivro;
+    private BigDecimal preco;
+    private int qtdDisponivel;
+    private LocalDate dataAnuncio;
 }

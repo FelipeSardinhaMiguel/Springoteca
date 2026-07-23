@@ -1,5 +1,6 @@
 package br.com.felipe.springoteca.models;
 
+import br.com.felipe.springoteca.enuns.Classificacao;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,7 +20,7 @@ public class LivroModel {
     private String titulo;
     private Long idAutor;
     private Long idEditora;
-    private Integer quantidade;
+    private Classificacao classIndicativa;
     //Anotação que serve para informar o jpa que o atributo abaixo (dataPublicacao) é o nome da coluna no sql (dtPublicacao); informando que é not null
     @Column(name = "dtPublicacao", nullable = false)
     private LocalDate dataPublicacao;

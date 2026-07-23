@@ -3,6 +3,8 @@ package br.com.felipe.springoteca.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "funcionario")
 @Getter
@@ -14,11 +16,10 @@ public class FuncionarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String f_name;
-    private String m_name;
-    private String sm_name;
-    private String l_name;
-    private double salario;
-    private double comissao;
+    private String firstName;
+    private String secondName;
+    private String lastName;
+    private BigDecimal salario;
+    private BigDecimal comissao;
     private int qtdLivroVendido;
 }
